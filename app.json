@@ -8,5 +8,6 @@
   ],
   "website": "http://github.com/go-shiori/shiori",
   "repository": "http://github.com/go-shiori/shiori",
-  "logo": "https://raw.githubusercontent.com/go-shiori/shiori/master/internal/view/res/apple-touch-icon-144x144.png"
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "logo": "https://github.com/go-shiori/shiori/blob/master/internal/view/res/favicon-32x32.png"
 }
