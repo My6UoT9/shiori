@@ -142,5 +142,6 @@ func openPostgreSQLDatabase() (database.DB, error) {
 
 func openHerokuPostgreSQLDatabase() (database.DB, error) {
 
-	return database.OpenPGDatabase(os.LookupEnv("DATABASE_URL"))
+    connString, _ := os.LookupEnv("DATABASE_URL")
+	return database.OpenPGDatabase(connString)
 }
