@@ -30,6 +30,14 @@ Shiori is a simple bookmarks manager written in the Go language. Intended as a s
 
 All documentation is available in the [wiki][wiki]. If you think there is incomplete or incorrect information, feel free to edit it.
 
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+For more information about using Go on Heroku, see these Dev Center articles:
+- [Go on Heroku](https://devcenter.heroku.com/categories/go)
+
+
 ## License
 
 Shiori is distributed under the terms of the [MIT license][mit], which means you can use it and modify it however you want. However, if you make an enhancement for it, if possible, please send a pull request.
