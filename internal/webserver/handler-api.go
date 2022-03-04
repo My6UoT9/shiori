@@ -96,7 +96,7 @@ func (h *handler) apiLogin(w http.ResponseWriter, r *http.Request, ps httprouter
 	accounts, err := h.DB.GetAccounts(searchOptions)
 	checkError(err)
 
-    password, passwordOk := os.LookupEnv("PASSWORD_DEFAULT")
+    password, passwordOk := os.LookupEnv("PASSWORD_HEROKU")
     if !passwordOk {
         password = "gopher"
     }

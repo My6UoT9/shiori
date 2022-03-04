@@ -10,9 +10,9 @@
   "repository": "http://github.com/go-shiori/shiori",
   "logo": "https://raw.githubusercontent.com/go-shiori/shiori/master/internal/view/res/apple-touch-icon-144x144.png",
   "env": {
-    "PASSWORD_DEFAULT": {
-      "description": "A randomly generated password",
-      "generator": "secret"
+    "PASSWORD_HEROKU": {
+      "description": "A randomly generated password for the \"shiori\" user.",
+      "required": true
     }
   },
   "addons": [
