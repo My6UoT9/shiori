@@ -106,6 +106,8 @@ func openDatabase() (database.DB, error) {
 		return openMySQLDatabase()
 	case "postgresql":
 		return openPostgreSQLDatabase()
+	case "heroku-postgresql":
+		return openPostgreSQLDatabase()
 	default:
 		return openSQLiteDatabase()
 	}
@@ -136,4 +138,9 @@ func openPostgreSQLDatabase() (database.DB, error) {
 	connString := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 		host, port, user, password, dbName)
 	return database.OpenPGDatabase(connString)
+}
+
+func openHerokuPostgreSQLDatabase() (database.DB, error) {
+
+	return database.OpenPGDatabase(os.LookupEnv("DATABASE_URL"))
 }
