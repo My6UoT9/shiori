@@ -34,6 +34,7 @@ All documentation is available in the [wiki][wiki]. If you think there is incomp
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+For persistent storage, be sure to add the "Heroku Postgres" addon.
 For more information about using Go on Heroku, see these Dev Center articles:
 - [Go on Heroku](https://devcenter.heroku.com/categories/go)
 
