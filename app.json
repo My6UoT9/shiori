@@ -8,6 +8,13 @@
   ],
   "website": "http://github.com/go-shiori/shiori",
   "repository": "http://github.com/go-shiori/shiori",
-  "addons": ["heroku-postgresql:hobby-dev"],
-  "logo": "https://github.com/go-shiori/shiori/blob/master/internal/view/res/favicon-32x32.png"
+  "logo": "https://github.com/go-shiori/shiori/blob/master/internal/view/res/favicon-32x32.png",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "13"
+      }
+    }
+  ]
 }
