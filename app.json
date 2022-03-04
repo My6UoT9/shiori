@@ -9,6 +9,12 @@
   "website": "http://github.com/go-shiori/shiori",
   "repository": "http://github.com/go-shiori/shiori",
   "logo": "https://raw.githubusercontent.com/go-shiori/shiori/master/internal/view/res/apple-touch-icon-144x144.png",
+  "env": {
+    "PASSWORD_DEFAULT": {
+      "description": "A randomly generated password",
+      "generator": "secret"
+    }
+  },
   "addons": [
     {
       "plan": "heroku-postgresql",
