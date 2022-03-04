@@ -154,7 +154,7 @@ func openHerokuPostgreSQLDatabase() (database.DB, error) {
 	password := matches[2]
 	dbName := matches[5]
 
-	connString := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
+	connString := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=allow",
     		host, port, user, password, dbName)
 
 	return database.OpenPGDatabase(connString)
