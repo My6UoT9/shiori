@@ -7,5 +7,6 @@
     "pocket"
   ],
   "website": "http://github.com/go-shiori/shiori",
-  "repository": "http://github.com/go-shiori/shiori"
+  "repository": "http://github.com/go-shiori/shiori",
+  "addons": ["heroku-postgresql:hobby-dev"]
 }
