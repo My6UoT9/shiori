@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 	fp "path/filepath"
-    "regexp",
+    "regexp"
 
 	"github.com/go-shiori/shiori/internal/database"
 	apppaths "github.com/muesli/go-app-paths"
