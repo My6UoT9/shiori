@@ -107,7 +107,7 @@ func openDatabase() (database.DB, error) {
 	case "postgresql":
 		return openPostgreSQLDatabase()
 	case "heroku-postgresql":
-		return openPostgreSQLDatabase()
+		return openHerokuPostgreSQLDatabase()
 	default:
 		return openSQLiteDatabase()
 	}
@@ -141,7 +141,20 @@ func openPostgreSQLDatabase() (database.DB, error) {
 }
 
 func openHerokuPostgreSQLDatabase() (database.DB, error) {
+    // exemplary connection string from heroku:
+    // postgres://abcdef123ab:abcdeef1@ec2-123-123-123-123.eu-west-1.compute.amazonaws.com:5432/abcde123a1a1ab
+    re := regexp.MustCompile(`postgres://(\w+):(\w+)@(.*):(\d+)/(.*)`)
+    herokuConnString, _ := os.LookupEnv("DATABASE_URL")
+    matches := re.FindStringSubmatch(herokuConnString)
 
-    connString, _ := os.LookupEnv("DATABASE_URL")
+	host := matches[3]
+	port := matches[4]
+	user := matches[1]
+	password := matches[2]
+	dbName := matches[5]
+
+	connString := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
+    		host, port, user, password, dbName)
+
 	return database.OpenPGDatabase(connString)
 }
